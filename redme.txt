@@ -1,0 +1,21 @@
+-@Input : used to send data from child to parent
+-@output - used to send data from parent to child 
+-can put alias for property by passing it both decorator
+-View Enpasulation : css is applied sepreately per component because angular creates shadow dom
+-can set using encapsulation property inside @Component decorator. 
+-encapsulation can be of below types native(same as emulated but supported by few browser),emulated(default, created shadow DOM), none(removes default features of angular js )
+-we can create local refernce variable which is accessible at html page only. can access it two ways
+        1. passing it parameter to method
+        2.create varible before using it by @ViewChild decorator. 
+-angular doesnt recognise code between starting and ending tag of component. for that you need to ng-content at that components html page.
+-you can view your content using @ViewContent
+
+Angular JS LifeCycle
+ngOnChanges - called @Input proporty changed
+ngOnInit : called after initialization of component. Constrctuctor
+ngDoCheck:called each time if any changes in component or html
+ngAfterContentInit: after proection <ng-content>
+ngAfterContentChecked- called if any changes in ng content
+ngAfterViewInit- called on initialization of view and childview
+ngAfterViewhecked -called if any chnages in template
+ngDestroy- to destroy component from DOM
